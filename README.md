@@ -8,6 +8,7 @@ Diskreter tragbarer Alarmknopf (**NotfallbuttonLoRa Mini**) für eine allein arb
 
 - [`CODE.md`](CODE.md) – Projektauftrag, Anforderungen, Phasen und Definition of Done
 - [`CHANGELOG.md`](CHANGELOG.md) – Änderungshistorie
+- [`docs/hardware-inventory.md`](docs/hardware-inventory.md) – Hardware-Inventur (Phase 0)
 
 ## Aktueller Stand
 
