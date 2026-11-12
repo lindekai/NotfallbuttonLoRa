@@ -15,6 +15,7 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/).
 - `CODE.md` §16: Ergänzungen zu 3D-druckbaren Gehäusen, Darstellung im Repository und Autorschaft.
 - Hardware-Inventur um 3D-Drucker ergänzt.
 - `LICENSE`: MIT-Lizenz.
+- `firmware/hw-probe/`: board-unabhängiger ESP32-Info-Sketch für Phase 0 (keine GPIOs, kein Funk) mit Flash- und Ausleseanleitung; noch nicht kompiliert/getestet.
 
 ### Geändert
 - `README.md` neu gestaltet: Banner, Status-Badges, eingebundene Grafiken, Geräte, Gehäuse, Phasenübersicht, Autor.

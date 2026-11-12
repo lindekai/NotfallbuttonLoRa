@@ -8,6 +8,7 @@
 - **Niemals mit LoRa senden ohne angeschlossene Antenne** – das kann den Funkchip beschädigen. Der Info-Sketch aus Schritt 3 sendet nicht; trotzdem Antenne grundsätzlich vor dem Einschalten anschließen.
 - Zunächst **kein Akku, kein Taster, kein Motor** anschließen. Nur Micro-USB an den Rechner.
 - Abschirmblech (Metalldeckel) über dem Funkchip **nicht entfernen**.
+- Anleitung zum Info-Sketch: [`firmware/hw-probe/`](../firmware/hw-probe/README.md).
 - Datenkabel verwenden (reine Ladekabel werden vom Rechner nicht als serieller Port erkannt).
 
 ## Identifikationshinweise
@@ -44,6 +45,7 @@ Die Zuordnung zu den Rollen (`SOS-01`, `GW-PRAXIS`, `GW-HOME`, `TEST-04`) erfolg
 | Sichtbare Schäden / Besonderheiten | OFFEN | OFFEN | OFFEN | OFFEN |
 | Foto-Dateinamen | OFFEN | OFFEN | OFFEN | OFFEN |
 | macOS erkennt seriellen Port (Name) | OFFEN | OFFEN | OFFEN | OFFEN |
+| Upload-Log: Zeile `Chip is …` | OFFEN | OFFEN | OFFEN | OFFEN |
 | **Info-Sketch (Schritt 3):** Chipmodell | OFFEN | OFFEN | OFFEN | OFFEN |
 | **Info-Sketch:** Chip-Revision | OFFEN | OFFEN | OFFEN | OFFEN |
 | **Info-Sketch:** Flashgröße | OFFEN | OFFEN | OFFEN | OFFEN |

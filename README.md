@@ -88,12 +88,14 @@ NotfallbuttonLoRa/
 ├── CODE.md                    Projektauftrag und Anforderungen
 ├── CHANGELOG.md               Änderungshistorie
 ├── LICENSE                    MIT-Lizenz
-└── docs/
-    ├── hardware-inventory.md  Erfassungsbogen Phase 0
-    └── images/                Grafiken (SVG, hell/dunkel) und Fotos
+├── docs/
+│   ├── hardware-inventory.md  Erfassungsbogen Phase 0
+│   └── images/                Grafiken (SVG, hell/dunkel) und Fotos
+└── firmware/
+    └── hw-probe/              ESP32-Info-Sketch zur Board-Erfassung
 ```
 
-Weitere Ordner (`firmware/`, `services/`, `hardware/enclosure/`, `tests/` …) entstehen mit den jeweiligen Phasen.
+Weitere Ordner (`services/`, `hardware/enclosure/`, `tests/` …) entstehen mit den jeweiligen Phasen.
 
 ## Sicherheit und Datenschutz
 
