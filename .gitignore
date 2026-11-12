@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Secrets und lokale Konfiguration (nur *.example.* einchecken)
+*.env
+!*.example.env
+secrets/
+**/secrets.h
+!**/secrets.example.h
+
+# Arduino / Build-Artefakte
+build/
+*.bin
+*.elf
+*.map
+
+# Editoren
+.vscode/
+.idea/
+*.swp
+
+# Logs und Messrohdaten mit möglichen Standortbezügen lokal halten
+*.log
