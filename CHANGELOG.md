@@ -17,5 +17,8 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/).
 - `LICENSE`: MIT-Lizenz.
 - `firmware/hw-probe/`: board-unabhängiger ESP32-Info-Sketch für Phase 0 (keine GPIOs, kein Funk) mit Flash- und Ausleseanleitung; noch nicht kompiliert/getestet.
 
+- `docs/anleitung/`: Gerüst der Nachbau-Anleitung für das gesamte System (Kapitel 00–14), Kapitel 00 Überblick in erster Fassung.
+- `CODE.md` §16: vollständige Nachbau-Anleitung als Projektbestandteil.
+
 ### Geändert
 - `README.md` neu gestaltet: Banner, Status-Badges, eingebundene Grafiken, Geräte, Gehäuse, Phasenübersicht, Autor.

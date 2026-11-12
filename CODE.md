@@ -250,6 +250,13 @@ NotfallbuttonLoRa/
 - Fotos vor dem Einchecken von Metadaten befreien; keine Seriennummern, Adressen oder Personen erkennbar. Keine generierten „Hardwarefotos“.
 - Messdiagramme ausschließlich aus echten Messdaten erzeugen.
 
+### Vollständige Nachbau-Anleitung
+
+- Das Repository dokumentiert das **gesamte Projekt**, nicht nur die Firmware: Notfallbuttons, Gateways, Gehäuse, Alarmdienst auf der Synology, n8n, Pushover, Tailscale, FRITZ!Box (inkl. optionalem SIP-Anruf), Inbetriebnahme, Tests und Betrieb.
+- Ablage unter `docs/anleitung/` in nummerierten Kapiteln mit einheitlicher Gliederung: Ziel → Voraussetzungen → Schritte → Prüfen → Typische Fehler.
+- Kapitel werden erst in der Phase ausgearbeitet, in der der Teil aufgebaut und getestet ist; bis dahin Status `OFFEN`.
+- Screenshots von Bedienoberflächen nur geschwärzt bzw. mit Platzhaltern.
+
 ### Autorschaft
 
 - Alleiniger Autor des Projekts ist der Projektinhaber (`lindekai`). Commits, Dokumente und Dateien enthalten keine Hinweise auf eingesetzte KI-Werkzeuge.

@@ -19,6 +19,7 @@
 
 ## Inhalt
 
+- [Anleitung](#anleitung)
 - [So funktioniert es](#so-funktioniert-es)
 - [Bedienung](#bedienung)
 - [Alarm und Eskalation](#alarm-und-eskalation)
@@ -28,6 +29,10 @@
 - [Repository](#repository)
 - [Sicherheit und Datenschutz](#sicherheit-und-datenschutz)
 - [Autor und Lizenz](#autor-und-lizenz)
+
+## Anleitung
+
+Die [**vollständige Nachbau-Anleitung**](docs/anleitung/README.md) führt durch das gesamte System: Notfallbuttons und Gateways, Gehäuse aus dem 3D-Drucker, Alarmdienst auf der Synology, n8n, Pushover, Tailscale und FRITZ!Box – bis zu Inbetriebnahme, Ausfalltests und täglichem Betrieb. Kapitel werden ausgearbeitet, sobald der jeweilige Teil aufgebaut und getestet ist.
 
 ## So funktioniert es
 
@@ -89,6 +94,7 @@ NotfallbuttonLoRa/
 ├── CHANGELOG.md               Änderungshistorie
 ├── LICENSE                    MIT-Lizenz
 ├── docs/
+│   ├── anleitung/             Nachbau-Anleitung für das gesamte System
 │   ├── hardware-inventory.md  Erfassungsbogen Phase 0
 │   └── images/                Grafiken (SVG, hell/dunkel) und Fotos
 └── firmware/
