@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500" role="img" aria-labelledby="t d">
+  <title id="t">Bedienung und Vibrationsmuster</title>
+  <desc id="d">Kurzer Druck schaltet das Display für etwa 10 Sekunden ein. Ein Druck ab 2 Sekunden löst einen stillen SOS aus. Vibration: 1 mal kurz technisch empfangen, 2 mal kurz persönlich quittiert, 3 mal kurz noch nicht bestätigt.</desc>
+  <style>
+    :root {
+      --bg: #ffffff; --edge: #d0d7de; --text: #1f2328; --muted: #59636e;
+      --primary: #0b6e69; --primary-fill: #e6f4f3;
+      --alarm: #c62828; --alarm-fill: #fdecea;
+      --amber: #b26a00; --amber-fill: #fff4e0;
+      --ok: #1a7f37; --ok-fill: #e6f4ea; --track: #eaeef2;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117; --edge: #30363d; --text: #e6edf3; --muted: #9198a1;
+        --primary: #3fb9b0; --primary-fill: #0f2a2a;
+        --alarm: #ff6b6b; --alarm-fill: #3a1616;
+        --amber: #e3a33b; --amber-fill: #33240a;
+        --ok: #56d364; --ok-fill: #12301a; --track: #21262d;
+      }
+    }
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--text); }
+    .bg { fill: var(--bg); }
+    .sec { font-size: 20px; font-weight: 700; }
+    .secsub { font-size: 13px; fill: var(--muted); }
+    .rowlbl { font-size: 16px; font-weight: 600; }
+    .tick { font-size: 12px; fill: var(--muted); }
+    .res { font-size: 15px; }
+    .res b, .strong { font-weight: 700; }
+    .foot { font-size: 12px; fill: var(--muted); font-style: italic; }
+    .track { fill: var(--track); }
+    .press-short { fill: var(--primary); }
+    .press-long { fill: var(--alarm); }
+    .axis { stroke: var(--edge); stroke-width: 1.5; }
+    .thr { stroke: var(--alarm); stroke-width: 2; stroke-dasharray: 5 4; }
+    .thrlbl { font-size: 13px; font-weight: 700; fill: var(--alarm); }
+    .sep { stroke: var(--edge); stroke-width: 1; }
+    .p1 { fill: var(--primary); } .p2 { fill: var(--ok); } .p3 { fill: var(--amber); }
+    .pill1 { fill: var(--primary-fill); } .pill2 { fill: var(--ok-fill); } .pill3 { fill: var(--amber-fill); }
+    .pillAlarm { fill: var(--alarm-fill); }
+  </style>
+  <rect class="bg" width="1000" height="500" rx="16"/>
+
+  <!-- Taster -->
+  <text class="sec" x="30" y="46">Taster</text>
+  <text class="secsub" x="104" y="46">Entprellt · Zustand bleibt nach Loslassen erhalten</text>
+
+  <!-- Zeitachse 0–3 s: x = 230 + 130·t -->
+  <line class="thr" x1="490" y1="66" x2="490" y2="186"/>
+  <text class="thrlbl" x="490" y="62" text-anchor="middle">2 s</text>
+
+  <text class="rowlbl" x="30" y="101">Kurzer Druck</text>
+  <rect class="track" x="230" y="86" width="390" height="22" rx="11"/>
+  <rect class="press-short" x="230" y="86" width="60" height="22" rx="11"/>
+  <rect class="pill1" x="645" y="80" width="325" height="34" rx="17"/>
+  <text class="res" x="663" y="102"><tspan class="strong">Display ca. 10 s an</tspan> · kein Alarm</text>
+
+  <text class="rowlbl" x="30" y="157">Druck ≥ 2 s</text>
+  <rect class="track" x="230" y="142" width="390" height="22" rx="11"/>
+  <rect class="press-long" x="230" y="142" width="300" height="22" rx="11"/>
+  <rect class="pillAlarm" x="645" y="136" width="325" height="34" rx="17"/>
+  <text class="res" x="663" y="158"><tspan class="strong">Stiller SOS</tspan> · Display bleibt aus</text>
+
+  <line class="axis" x1="230" y1="186" x2="620" y2="186"/>
+  <text class="tick" x="230" y="204" text-anchor="middle">0 s</text>
+  <text class="tick" x="360" y="204" text-anchor="middle">1 s</text>
+  <text class="tick" x="620" y="204" text-anchor="middle">3 s</text>
+
+  <line class="sep" x1="30" y1="232" x2="970" y2="232"/>
+
+  <!-- Vibration -->
+  <text class="sec" x="30" y="276">Vibration</text>
+  <text class="secsub" x="128" y="276">Stumm, nur fühlbar · kein Ton, kein Licht</text>
+
+  <text class="rowlbl" x="30" y="325">1 × kurz</text>
+  <rect class="p1" x="230" y="310" width="44" height="20" rx="10"/>
+  <rect class="pill1" x="420" y="303" width="550" height="34" rx="17"/>
+  <text class="res" x="438" y="325"><tspan class="strong">Technisch empfangen</tspan> – noch keine menschliche Reaktion</text>
+
+  <text class="rowlbl" x="30" y="383">2 × kurz</text>
+  <rect class="p2" x="230" y="368" width="44" height="20" rx="10"/>
+  <rect class="p2" x="290" y="368" width="44" height="20" rx="10"/>
+  <rect class="pill2" x="420" y="361" width="550" height="34" rx="17"/>
+  <text class="res" x="438" y="383"><tspan class="strong">Persönlich quittiert</tspan> – eine Vertrauensperson hat reagiert</text>
+
+  <text class="rowlbl" x="30" y="441">3 × kurz</text>
+  <rect class="p3" x="230" y="426" width="44" height="20" rx="10"/>
+  <rect class="p3" x="290" y="426" width="44" height="20" rx="10"/>
+  <rect class="p3" x="350" y="426" width="44" height="20" rx="10"/>
+  <rect class="pill3" x="420" y="419" width="550" height="34" rx="17"/>
+  <text class="res" x="438" y="441"><tspan class="strong">Noch nicht bestätigt</tspan> – Wiederholungen laufen weiter</text>
+
+  <text class="foot" x="30" y="482">Pulsdauern und Abstände schematisch – reale Werte OFFEN / ZU TESTEN.</text>
+</svg>

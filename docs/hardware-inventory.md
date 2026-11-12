@@ -57,6 +57,7 @@ Die Zuordnung zu den Rollen (`SOS-01`, `GW-PRAXIS`, `GW-HOME`, `TEST-04`) erfolg
 | LiPo-Akku (neu) | OFFEN – noch nicht beschafft/geprüft | Kapazität, Schutzschaltung, Steckertyp und **Polarität** vor Anschluss prüfen |
 | SOS-Taster | OFFEN | Typ, Größe, Schließer/Öffner |
 | ERM-Vibrationsmotor (iPhone 4 GSM) | OFFEN – Spannung/Strom ZU MESSEN | Nur über MOSFET/Treiber mit Freilaufdiode, nie direkt am GPIO |
+| 3D-Drucker | OFFEN | Modell, Bauraum, Düse, verfügbare Materialien (für `hardware/enclosure/`) |
 | Arduino IDE (Version) | OFFEN | |
 | ESP32-Board-Paket / Heltec-Paket (Version) | OFFEN – erst nach Identifikation festlegen | |
 

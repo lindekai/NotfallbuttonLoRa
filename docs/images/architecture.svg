@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 620" width="1040" height="620" role="img" aria-labelledby="t d">
+  <title id="t">Architektur NotfallbuttonLoRa (Zielbild)</title>
+  <desc id="d">SOS-01 sendet per LoRa an GW-PRAXIS und, falls die Reichweite reicht, an GW-HOME. Gateways melden an Alarmdienste auf den Synology-NAS, die über Tailscale verbunden sind und Pushover mit Eskalation auslösen. Die persönliche Quittierung läuft über einen Rückkanal zum Gerät.</desc>
+  <style>
+    :root {
+      --bg: #ffffff; --edge: #d0d7de; --text: #1f2328; --muted: #59636e;
+      --primary: #0b6e69; --primary-fill: #e6f4f3;
+      --alarm: #c62828; --alarm-fill: #fdecea;
+      --amber: #b26a00; --amber-fill: #fff4e0;
+      --neutral-fill: #f6f8fa; --ret: #6639ba;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117; --edge: #30363d; --text: #e6edf3; --muted: #9198a1;
+        --primary: #3fb9b0; --primary-fill: #0f2a2a;
+        --alarm: #ff6b6b; --alarm-fill: #3a1616;
+        --amber: #e3a33b; --amber-fill: #33240a;
+        --neutral-fill: #161b22; --ret: #b392f0;
+      }
+    }
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--text); }
+    .bg { fill: var(--bg); }
+    .h { font-size: 13px; font-weight: 700; fill: var(--muted); letter-spacing: 1px; }
+    .name { font-size: 17px; font-weight: 700; }
+    .info { font-size: 13px; fill: var(--muted); }
+    .lbl { font-size: 12.5px; fill: var(--muted); }
+    .lbl-amber { font-size: 12.5px; fill: var(--amber); font-weight: 600; }
+    .lbl-ret { font-size: 13px; fill: var(--ret); font-weight: 600; }
+    .box { fill: var(--neutral-fill); stroke: var(--edge); stroke-width: 1.5; }
+    .box-dev { fill: var(--alarm-fill); stroke: var(--alarm); stroke-width: 2; }
+    .box-pri { fill: var(--primary-fill); stroke: var(--primary); stroke-width: 1.5; }
+    .box-opt { fill: var(--amber-fill); stroke: var(--amber); stroke-width: 1.5; stroke-dasharray: 6 4; }
+    .lane { fill: none; stroke: var(--edge); stroke-width: 1; stroke-dasharray: 2 6; }
+    .e { fill: none; stroke: var(--primary); stroke-width: 2.5; }
+    .e-opt { fill: none; stroke: var(--amber); stroke-width: 2.5; stroke-dasharray: 8 6; }
+    .e-ret { fill: none; stroke: var(--ret); stroke-width: 2.5; stroke-dasharray: 2 6; stroke-linecap: round; }
+    .m-pri { fill: var(--primary); } .m-opt { fill: var(--amber); } .m-ret { fill: var(--ret); }
+    .dot { fill: var(--alarm); }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="m-pri" d="M0 0L10 5L0 10z"/></marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="m-opt" d="M0 0L10 5L0 10z"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="m-ret" d="M0 0L10 5L0 10z"/></marker>
+  </defs>
+  <rect class="bg" width="1040" height="620" rx="16"/>
+
+  <!-- Spaltenköpfe -->
+  <text class="h" x="115" y="44" text-anchor="middle">GERÄT</text>
+  <text class="h" x="380" y="44" text-anchor="middle">LORA-GATEWAYS</text>
+  <text class="h" x="660" y="44" text-anchor="middle">ALARMDIENSTE (NAS)</text>
+  <text class="h" x="930" y="44" text-anchor="middle">BENACHRICHTIGUNG</text>
+
+  <!-- Kanten -->
+  <path class="e" d="M200 262 C245 262 245 155 288 155" marker-end="url(#a)"/>
+  <text class="lbl" x="214" y="196">LoRa</text>
+  <path class="e-opt" d="M200 298 C245 298 245 405 288 405" marker-end="url(#ao)"/>
+  <text class="lbl-amber" x="150" y="372">Reichweite</text>
+  <text class="lbl-amber" x="150" y="388">unverifiziert</text>
+
+  <path class="e-opt" d="M115 235 V92 H640 V108" marker-end="url(#ao)"/>
+  <text class="lbl-amber" x="300" y="84">optional: WLAN direkt</text>
+
+  <path class="e" d="M470 155 H558" marker-end="url(#a)"/>
+  <text class="lbl" x="514" y="146" text-anchor="middle">WLAN/LAN</text>
+  <path class="e" d="M470 405 H558" marker-end="url(#a)"/>
+  <text class="lbl" x="514" y="396" text-anchor="middle">WLAN/LAN</text>
+
+  <path class="e" d="M660 203 V357" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text class="lbl" x="672" y="276">Tailscale</text>
+  <text class="lbl" x="672" y="292">(Internet)</text>
+
+  <path class="e" d="M760 170 C805 170 805 262 848 262" marker-end="url(#a)"/>
+  <path class="e" d="M760 390 C805 390 805 298 848 298" marker-end="url(#a)"/>
+  <path class="e-opt" d="M760 132 C800 132 800 112 848 112" marker-end="url(#ao)"/>
+  <path class="e" d="M930 330 V378" marker-end="url(#a)"/>
+
+  <!-- Rückkanal -->
+  <path class="e-ret" d="M930 450 V530 H115 V328" marker-end="url(#ar)"/>
+  <text class="lbl-ret" x="520" y="552" text-anchor="middle">Persönliche Quittierung über funktionierenden Rückkanal → Vibration am Gerät</text>
+
+  <!-- Knoten -->
+  <rect class="box-dev" x="30" y="235" width="170" height="90" rx="14"/>
+  <circle class="dot" cx="54" cy="262" r="7"/>
+  <text class="name" x="70" y="268">SOS-01</text>
+  <text class="info" x="48" y="292">Mini · Akku · Taster</text>
+  <text class="info" x="48" y="310">OLED · Vibration</text>
+
+  <rect class="box-pri" x="290" y="110" width="180" height="90" rx="12"/>
+  <text class="name" x="380" y="148" text-anchor="middle">GW-PRAXIS</text>
+  <text class="info" x="380" y="172" text-anchor="middle">LoRa-Empfang + WLAN</text>
+
+  <rect class="box-opt" x="290" y="360" width="180" height="90" rx="12"/>
+  <text class="name" x="380" y="398" text-anchor="middle">GW-HOME</text>
+  <text class="info" x="380" y="422" text-anchor="middle">nur nach Funktest belastbar</text>
+
+  <rect class="box-pri" x="560" y="110" width="200" height="90" rx="12"/>
+  <text class="name" x="660" y="146" text-anchor="middle">Alarmdienst</text>
+  <text class="info" x="660" y="170" text-anchor="middle">Synology Praxis</text>
+
+  <rect class="box-pri" x="560" y="360" width="200" height="90" rx="12"/>
+  <text class="name" x="660" y="396" text-anchor="middle">Alarmdienst</text>
+  <text class="info" x="660" y="420" text-anchor="middle">Synology Zuhause · n8n</text>
+
+  <rect class="box-opt" x="850" y="80" width="160" height="64" rx="12"/>
+  <text class="name" x="930" y="108" text-anchor="middle">FRITZ!Box</text>
+  <text class="info" x="930" y="128" text-anchor="middle">SIP-Anruf (optional)</text>
+
+  <rect class="box-dev" x="850" y="230" width="160" height="100" rx="12"/>
+  <text class="name" x="930" y="264" text-anchor="middle">Pushover</text>
+  <text class="info" x="930" y="286" text-anchor="middle">Emergency Prio 2</text>
+  <text class="info" x="930" y="306" text-anchor="middle">Eskalation nach 180 s</text>
+
+  <rect class="box" x="850" y="380" width="160" height="70" rx="12"/>
+  <text class="name" x="930" y="410" text-anchor="middle">Vertrauens-</text>
+  <text class="name" x="930" y="432" text-anchor="middle">personen 1 + 2</text>
+
+  <!-- Legende -->
+  <g transform="translate(30 586)">
+    <line class="e" x1="0" y1="0" x2="40" y2="0"/><text class="lbl" x="50" y="4">vorgesehen</text>
+    <line class="e-opt" x1="150" y1="0" x2="190" y2="0"/><text class="lbl" x="200" y="4">optional / unverifiziert</text>
+    <line class="e-ret" x1="370" y1="0" x2="410" y2="0"/><text class="lbl" x="420" y="4">Rückkanal</text>
+    <text class="lbl" x="980" y="4" text-anchor="end">Ohne Internet: kein Pushover, kein Tailscale</text>
+  </g>
+</svg>

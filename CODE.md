@@ -233,6 +233,28 @@ NotfallbuttonLoRa/
 - Betriebshandbuch mit täglicher Funktionskontrolle und Alternativ-Notfallplan fertig.
 - **Ausdrückliche Qualitätsprüfung und Benutzerfreigabe** erfolgt. Bis dahin ausschließlich Prototyp.
 
+## 16. Ergänzungen (2026-11-12)
+
+### Gehäuse aus dem 3D-Drucker
+
+- Für **alle Geräte** (`SOS-01`, Gateways, ggf. `TEST-04`) werden kleine Gehäuse entworfen, die der Projektinhaber auf dem eigenen 3D-Drucker druckt.
+- Quelldateien (parametrisch, versionierbar) und druckfertige Exporte gehören ins Repository unter `hardware/enclosure/`, je Gerät mit Druckhinweisen (Material, Ausrichtung, Stützstrukturen, Toleranzen) und Fotos des gedruckten Ergebnisses.
+- Maße ausschließlich aus gemessener Hardware ableiten (Board, Akku, Taster, Motor, Antenne); nichts aus Datenblättern ungeprüft übernehmen.
+- Anforderungen Mini: großer ertastbarer Taster mit Schutz gegen versehentliches Auslösen, Zugang zu USB-Ladebuchse, Antennenführung, Halterung für Vibrationsmotor, Tragemöglichkeit.
+- Anforderungen Gateways: Montage, Antennenposition, Belüftung, Zugang zu USB/Strom.
+- Offen: Druckermodell und Bauraum, Material, CAD-Werkzeug (Vorschlag: OpenSCAD, da textbasiert und gut versionierbar).
+
+### Darstellung im Repository
+
+- Das Repository soll ansprechend und aussagekräftig gestaltet sein: eigene SVG-Grafiken (hell/dunkel) unter `docs/images/`, Mermaid für technische Abläufe, echte Fotos von Hardware, Aufbau und Gehäusen.
+- Fotos vor dem Einchecken von Metadaten befreien; keine Seriennummern, Adressen oder Personen erkennbar. Keine generierten „Hardwarefotos“.
+- Messdiagramme ausschließlich aus echten Messdaten erzeugen.
+
+### Autorschaft
+
+- Alleiniger Autor des Projekts ist der Projektinhaber (`lindekai`). Commits, Dokumente und Dateien enthalten keine Hinweise auf eingesetzte KI-Werkzeuge.
+- Lizenz: **MIT** (`LICENSE`).
+
 ---
 
 **Erste konkrete Aufgabe an den Coding-Agenten:** Phase 0 anhand der tatsächlich vorhandenen Boards abschließen; danach die kleinste lauffähige Arduino-IDE-Firmware für **Phase 1 LoRa-Funklabor** implementieren. Keine Frequenzen, Pins oder Boardrevisionen erraten. Erst einen prüfbaren Arbeitsplan vorlegen, dann mit der Umsetzung beginnen.

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360" role="img" aria-labelledby="t d">
+  <title id="t">Alarm- und Eskalationsablauf</title>
+  <desc id="d">Nach der SOS-Auslösung bestätigt ein Gateway den technischen Empfang. Pushover Emergency Priority 2 alarmiert Vertrauensperson 1 wiederholt. Ohne persönliche Quittierung wird nach 180 Sekunden zusätzlich Vertrauensperson 2 alarmiert. Eine persönliche Quittierung beendet die Eskalation und wird am Gerät mit 2 mal Vibration angezeigt.</desc>
+  <style>
+    :root {
+      --bg: #ffffff; --edge: #d0d7de; --text: #1f2328; --muted: #59636e;
+      --primary: #0b6e69; --primary-fill: #e6f4f3;
+      --alarm: #c62828; --alarm-fill: #fdecea;
+      --amber: #b26a00; --ok: #1a7f37; --ok-fill: #e6f4ea;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117; --edge: #30363d; --text: #e6edf3; --muted: #9198a1;
+        --primary: #3fb9b0; --primary-fill: #0f2a2a;
+        --alarm: #ff6b6b; --alarm-fill: #3a1616;
+        --amber: #e3a33b; --ok: #56d364; --ok-fill: #12301a;
+      }
+    }
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--text); }
+    .bg { fill: var(--bg); }
+    .sec { font-size: 20px; font-weight: 700; }
+    .lane { font-size: 15px; font-weight: 600; }
+    .tick { font-size: 12px; fill: var(--muted); }
+    .ev { font-size: 13px; }
+    .evm { font-size: 13px; fill: var(--muted); }
+    .note { font-size: 13.5px; }
+    .strong { font-weight: 700; }
+    .foot { font-size: 12px; fill: var(--muted); font-style: italic; }
+    .grid { stroke: var(--edge); stroke-width: 1; }
+    .axis { stroke: var(--muted); stroke-width: 1.5; }
+    .bar1 { fill: var(--alarm-fill); stroke: var(--alarm); stroke-width: 1.5; }
+    .bar2 { fill: var(--alarm-fill); stroke: var(--alarm); stroke-width: 1.5; stroke-dasharray: 6 4; }
+    .barlbl { font-size: 13px; font-weight: 600; fill: var(--alarm); }
+    .pulse { fill: var(--alarm); }
+    .sos { fill: var(--alarm); }
+    .ack { fill: var(--primary); }
+    .thr { stroke: var(--alarm); stroke-width: 2; stroke-dasharray: 5 4; }
+    .thrlbl { font-size: 13px; font-weight: 700; fill: var(--alarm); }
+    .okbox { fill: var(--ok-fill); stroke: var(--ok); stroke-width: 1.5; }
+    .okt { fill: var(--ok); font-weight: 700; font-size: 13.5px; }
+  </style>
+  <rect class="bg" width="1000" height="360" rx="16"/>
+  <text class="sec" x="30" y="44">Ablauf nach Auslösung</text>
+
+  <!-- Zeitachse: x = 210 + 3.5·t (t in s), 0–210 s -->
+  <g>
+    <line class="grid" x1="210" y1="70" x2="210" y2="240"/>
+    <line class="grid" x1="315" y1="70" x2="315" y2="240"/>
+    <line class="grid" x1="420" y1="70" x2="420" y2="240"/>
+    <line class="grid" x1="525" y1="70" x2="525" y2="240"/>
+    <line class="grid" x1="630" y1="70" x2="630" y2="240"/>
+    <line class="grid" x1="735" y1="70" x2="735" y2="240"/>
+    <line class="grid" x1="945" y1="70" x2="945" y2="240"/>
+  </g>
+  <line class="thr" x1="840" y1="64" x2="840" y2="240"/>
+  <text class="thrlbl" x="840" y="58" text-anchor="middle">180 s ohne persönliche Quittierung</text>
+
+  <!-- Gerät -->
+  <text class="lane" x="30" y="104">Gerät SOS-01</text>
+  <circle class="sos" cx="210" cy="99" r="9"/>
+  <text class="ev" x="248" y="96"><tspan class="strong">SOS</tspan> (≥ 2 s gedrückt)</text>
+  <circle class="ack" cx="230" cy="99" r="6"/>
+  <text class="evm" x="248" y="116">1 × kurz: technisch empfangen</text>
+
+  <!-- Vertrauensperson 1 -->
+  <text class="lane" x="30" y="164">Vertrauensperson 1</text>
+  <rect class="bar1" x="224" y="146" width="756" height="28" rx="6"/>
+  <text class="barlbl" x="238" y="165">Pushover Emergency Priority 2 · wiederholt bis zur Quittierung</text>
+
+  <!-- Vertrauensperson 2 -->
+  <text class="lane" x="30" y="220">Vertrauensperson 2</text>
+  <rect class="bar2" x="840" y="202" width="140" height="28" rx="6"/>
+  <text class="barlbl" x="830" y="221" text-anchor="end">zusätzlich alarmiert →</text>
+
+  <line class="axis" x1="210" y1="240" x2="980" y2="240"/>
+  <text class="tick" x="210" y="258" text-anchor="middle">0 s</text>
+  <text class="tick" x="315" y="258" text-anchor="middle">30</text>
+  <text class="tick" x="420" y="258" text-anchor="middle">60</text>
+  <text class="tick" x="525" y="258" text-anchor="middle">90</text>
+  <text class="tick" x="630" y="258" text-anchor="middle">120</text>
+  <text class="tick" x="735" y="258" text-anchor="middle">150</text>
+  <text class="tick" x="840" y="258" text-anchor="middle">180</text>
+  <text class="tick" x="945" y="258" text-anchor="middle">210</text>
+
+  <rect class="okbox" x="30" y="280" width="940" height="44" rx="10"/>
+  <text class="note" x="48" y="307"><tspan class="okt">Persönliche Quittierung</tspan> (Pushover-Receipt, serverseitig geprüft) beendet die Eskalation → <tspan class="strong">2 × kurz</tspan> am Gerät. Ein reines Transport-ACK stoppt nichts.</text>
+
+  <text class="foot" x="30" y="348">Schematisch – außer der 180-s-Grenze sind alle Zeitpunkte illustrativ; Repeat/Expire-Werte von Pushover OFFEN.</text>
+</svg>

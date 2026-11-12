@@ -11,3 +11,10 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/).
 - `.gitignore` für macOS-Dateien, Secrets, lokale Konfiguration und Build-Artefakte.
 - `CHANGELOG.md`.
 - `docs/hardware-inventory.md`: Erfassungsbogen für Phase 0 mit Sicherheitshinweisen, Identifikationsmerkmalen und Tabelle je Board (alle Werte `OFFEN`).
+- Grafiken unter `docs/images/` (SVG, automatisch hell/dunkel): Banner, Architektur, Bedienung und Vibrationsmuster, Alarm- und Eskalationsablauf.
+- `CODE.md` §16: Ergänzungen zu 3D-druckbaren Gehäusen, Darstellung im Repository und Autorschaft.
+- Hardware-Inventur um 3D-Drucker ergänzt.
+- `LICENSE`: MIT-Lizenz.
+
+### Geändert
+- `README.md` neu gestaltet: Banner, Status-Badges, eingebundene Grafiken, Geräte, Gehäuse, Phasenübersicht, Autor.

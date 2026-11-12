@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-labelledby="t d">
+  <title id="t">NotfallbuttonLoRa</title>
+  <desc id="d">Stiller Alarmknopf für allein arbeitende Personen in der Praxis. Prototyp, kein zertifiziertes Notrufsystem.</desc>
+  <style>
+    :root {
+      --bg1: #f3faf9; --bg2: #e3f1ef; --text: #12302e; --muted: #4a6563;
+      --primary: #0b6e69; --primary-soft: #cfe8e5; --alarm: #c62828;
+      --device: #ffffff; --device-edge: #9fc9c4; --amber: #8a5200; --amber-fill: #fff1d6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg1: #0d1a1a; --bg2: #102524; --text: #e6f2f0; --muted: #9db8b5;
+        --primary: #3fb9b0; --primary-soft: #1a3b39; --alarm: #ff6b6b;
+        --device: #142b2a; --device-edge: #2f5f5b; --amber: #f0b55a; --amber-fill: #33240a;
+      }
+    }
+    .bg { fill: url(#g); }
+    .s1 { stop-color: var(--bg1); } .s2 { stop-color: var(--bg2); }
+    .title { font: 700 64px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--text); letter-spacing: -1px; }
+    .title .lora { fill: var(--primary); }
+    .sub { font: 400 24px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--muted); }
+    .chip { font: 600 16px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--primary); }
+    .chipbox { fill: var(--primary-soft); }
+    .warn { font: 700 15px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: var(--amber); letter-spacing: 0.5px; }
+    .warnbox { fill: var(--amber-fill); stroke: var(--amber); stroke-width: 1.5; }
+    .device { fill: var(--device); stroke: var(--device-edge); stroke-width: 3; }
+    .btn { fill: var(--alarm); }
+    .btnring { fill: none; stroke: var(--alarm); stroke-width: 3; opacity: .35; }
+    .wave { fill: none; stroke: var(--primary); stroke-width: 6; stroke-linecap: round; }
+    .screen { fill: var(--primary-soft); }
+    .ant { stroke: var(--device-edge); stroke-width: 6; stroke-linecap: round; }
+  </style>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" class="s1"/><stop offset="1" class="s2"/>
+    </linearGradient>
+  </defs>
+  <rect class="bg" width="1200" height="300" rx="24"/>
+
+  <!-- Gerät -->
+  <g transform="translate(90 70)">
+    <line class="ant" x1="120" y1="22" x2="120" y2="-30"/>
+    <rect class="device" x="0" y="20" width="140" height="170" rx="30"/>
+    <rect class="screen" x="26" y="42" width="88" height="34" rx="6"/>
+    <circle class="btnring" cx="70" cy="132" r="38"/>
+    <circle class="btn" cx="70" cy="132" r="28"/>
+    <path class="wave" d="M168 40 a40 40 0 0 1 0 56" opacity=".95"/>
+    <path class="wave" d="M190 22 a66 66 0 0 1 0 92" opacity=".65"/>
+    <path class="wave" d="M212 4 a92 92 0 0 1 0 128" opacity=".35"/>
+  </g>
+
+  <text class="title" x="360" y="128">Notfallbutton<tspan class="lora">LoRa</tspan></text>
+  <text class="sub" x="362" y="170">Stiller Alarmknopf für allein arbeitende Personen in der Praxis</text>
+
+  <g transform="translate(362 196)">
+    <rect class="chipbox" width="72" height="30" rx="15"/><text class="chip" x="36" y="20" text-anchor="middle">LoRa</text>
+    <rect class="chipbox" x="82" width="112" height="30" rx="15"/><text class="chip" x="138" y="20" text-anchor="middle">Gateways</text>
+    <rect class="chipbox" x="204" width="130" height="30" rx="15"/><text class="chip" x="269" y="20" text-anchor="middle">Eskalation</text>
+    <rect class="chipbox" x="344" width="128" height="30" rx="15"/><text class="chip" x="408" y="20" text-anchor="middle">Vibration</text>
+    <rect class="warnbox" x="492" width="292" height="30" rx="15"/><text class="warn" x="638" y="20" text-anchor="middle">PROTOTYP · NICHT ZERTIFIZIERT</text>
+  </g>
+</svg>
