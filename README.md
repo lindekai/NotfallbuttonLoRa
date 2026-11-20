@@ -84,7 +84,7 @@ Alle Geräte erhalten kleine, selbst entworfene Gehäuse für den 3D-Druck – d
 | 4 | Pushover, Eskalation, Rückkanal | ⚪ offen |
 | 5 | Gehäuse, Miniaturisierung, Abnahme | ⚪ offen |
 
-Details stehen im Projektauftrag [`CODE.md`](CODE.md), Änderungen im [`CHANGELOG.md`](CHANGELOG.md).
+Details stehen im Projektauftrag [`CODE.md`](CODE.md), die aktuellen Arbeitsschritte im [`Arbeitsplan`](docs/arbeitsplan.md), Änderungen im [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Repository
 
@@ -95,6 +95,7 @@ NotfallbuttonLoRa/
 ├── LICENSE                    MIT-Lizenz
 ├── docs/
 │   ├── anleitung/             Nachbau-Anleitung für das gesamte System
+│   ├── arbeitsplan.md         freigegebene Arbeitsschritte mit Stand
 │   ├── hardware-inventory.md  Erfassungsbogen Phase 0
 │   └── images/                Grafiken (SVG, hell/dunkel) und Fotos
 └── firmware/

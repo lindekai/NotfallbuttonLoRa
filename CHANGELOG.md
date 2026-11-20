@@ -19,6 +19,7 @@ Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/).
 
 - `docs/anleitung/`: Gerüst der Nachbau-Anleitung für das gesamte System (Kapitel 00–14), Kapitel 00 Überblick in erster Fassung.
 - `CODE.md` §16: vollständige Nachbau-Anleitung als Projektbestandteil.
+- `docs/arbeitsplan.md`: freigegebener Arbeitsplan (Schritte 1–7, 2a, 2b) mit Stand je Schritt.
 
 ### Geändert
 - `README.md` neu gestaltet: Banner, Status-Badges, eingebundene Grafiken, Geräte, Gehäuse, Phasenübersicht, Autor.
